@@ -1,0 +1,27 @@
+--- dwm.c
++++ dwm.c
+@@ -234,6 +234,7 @@ static int xerror(Display *dpy, XErrorEvent *ee);
+ static int xerrordummy(Display *dpy, XErrorEvent *ee);
+ static int xerrorstart(Display *dpy, XErrorEvent *ee);
+ static void zoom(const Arg *arg);
++static void autostart_exec(void);
+ 
+ /* variables */
+ static const char broken[] = "broken";
+@@ -1277,6 +1306,16 @@ propertynotify(XEvent *e)
+ void
+ quit(const Arg *arg)
+ {
++	size_t i;
++
++	/* kill child processes */
++	for (i = 0; i < autostart_len; i++) {
++		if (0 < autostart_pids[i]) {
++			kill(autostart_pids[i], SIGTERM);
++			waitpid(autostart_pids[i], NULL, 0);
++		}
++	}
++
+ 	running = 0;
+ }
+ 
