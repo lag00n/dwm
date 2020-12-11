@@ -1,0 +1,8 @@
+patches/
+Makefile
+config.mk
+config.def.h.orig
+config.def.h.rej
+dwm.c.orig
+dwm.c.rej
+config.mk.orig

@@ -4,7 +4,7 @@ VERSION = 6.2
 # Customize below to fit your system
 
 # paths
-PREFIX = /home/murilo/.local
+PREFIX = /home/murilo/.stupid-stuff
 MANPREFIX = ${PREFIX}/share/man
 
 X11INC = /usr/X11R6/include
@@ -35,4 +35,4 @@ LDFLAGS  = ${LIBS}
 #LDFLAGS = ${LIBS}
 
 # compiler and linker
-CC = cc
+CC = gcc
