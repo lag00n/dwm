@@ -24,5 +24,5 @@
 <p>Im actually adding some new patches, so, i'll do updates here soon<p>
 
 <h6><b>Install instructions will be added soon too</b></h6>
-<p>Check my blog (still is a wip, so i've didn't post anything yet, but im working on that.) <a href="https://lag00n.github.io">link</a></p>
+
 
